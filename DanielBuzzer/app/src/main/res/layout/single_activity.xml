@@ -1,24 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#0066CC">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click Here When it says Go!"
+        android:id="@+id/singleReaction"
+        android:layout_marginTop="98dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/timertextView"
-        android:layout_marginBottom="221dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        android:text="What's Your Reaction Time?!"
+        android:id="@+id/singleTitle"
+        android:layout_marginTop="122dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Click Here!"
-        android:id="@+id/singleReaction"
-        android:layout_marginTop="98dp"
-        android:layout_alignTop="@+id/timertextView"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="GO!!!!"
+        android:id="@+id/goText"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/reactionText"
+        android:layout_above="@+id/singleReaction"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
