@@ -1,28 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:id="@+id/tabHost">
 
-    <ListView
-        android:id="@+id/oldTweetsList"
-        android:layout_width="fill_parent"
-        android:layout_height="263dp"
-        android:layout_weight="1"
-        android:scrollbars="vertical" >
-
-    </ListView>
-
-    <Button
-        android:id="@+id/clear"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Reaction" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/save"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Game Buzzer" />
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:touchscreenBlocksFocus="false"
+            android:tabStripEnabled="false"
+            android:longClickable="false"
+            android:clickable="false"></TabWidget>
 
-</LinearLayout>
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="452dp">
+
+            <LinearLayout
+                android:id="@+id/ReactionStats"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <ListView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/listView" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/BuzzerStats"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <ListView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/listView2" />
+            </LinearLayout>
+
+        </FrameLayout>
+    </LinearLayout>
+</TabHost>

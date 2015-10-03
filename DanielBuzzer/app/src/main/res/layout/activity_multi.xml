@@ -2,44 +2,46 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content" android:layout_height="wrap_content"
     android:background="#0066CC">
-    <GridLayout
+
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="208dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true">
 
         <Button
-            android:layout_width="181dp"
-            android:layout_height="214dp"
-            android:text="Player 1"
-            android:id="@+id/firstButton"
-            android:layout_row="22"
-            android:layout_column="0" />
+            android:layout_width="159dp"
+            android:layout_height="wrap_content"
+            android:text="Two Players"
+            android:id="@+id/button2p"
+            android:layout_gravity="center_horizontal" />
 
         <Button
-            android:layout_width="181dp"
-            android:layout_height="214dp"
-            android:text="Player 4"
-            android:id="@+id/fourthButton"
-            android:layout_row="0"
-            android:layout_column="13" />
+            android:layout_width="158dp"
+            android:layout_height="wrap_content"
+            android:text="Three Players"
+            android:id="@+id/button3p"
+            android:layout_gravity="center_horizontal" />
 
         <Button
-            android:layout_width="181dp"
-            android:layout_height="214dp"
-            android:text="Player 3"
-            android:id="@+id/thirdButton"
-            android:layout_row="0"
-            android:layout_column="0" />
+            android:layout_width="158dp"
+            android:layout_height="wrap_content"
+            android:text="Four Players"
+            android:id="@+id/button4p"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
 
-        <Button
-            android:layout_width="181dp"
-            android:layout_height="214dp"
-            android:text="Player 2"
-            android:id="@+id/secondButton"
-            android:layout_row="22"
-            android:layout_column="13" />
-
-    </GridLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#CC0000"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="How Many Players?"
+        android:id="@+id/playersText"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp" />
 
 </RelativeLayout>

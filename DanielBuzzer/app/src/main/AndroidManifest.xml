@@ -21,6 +21,7 @@
             android:label="@string/title_activity_single" >
             <intent-filter>
                 <action android:name="danielbuzzer.Single" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -29,6 +30,7 @@
             android:label="@string/title_activity_multi" >
             <intent-filter>
                 <action android:name="danielbuzzer.Multi" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -37,6 +39,34 @@
             android:label="@string/title_activity_stats" >
             <intent-filter>
                 <action android:name="danielbuzzer.Stats" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Multi2Activity"
+            android:label="@string/title_activity_multi2" >
+            <intent-filter>
+                <action android:name="danielbuzzer.Multi2" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Multi3Activity"
+            android:label="@string/title_activity_multi3" >
+            <intent-filter>
+                <action android:name="danielbuzzer.Multi3" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Multi4Activity"
+            android:label="@string/title_activity_multi4" >
+            <intent-filter>
+                <action android:name="danielbuzzer.Multi4" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

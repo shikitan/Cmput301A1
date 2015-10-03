@@ -6,4 +6,7 @@
     <string name="title_activity_single">SingleActivity</string>
     <string name="title_activity_multi">MultiActivity</string>
     <string name="title_activity_stats">Stats</string>
+    <string name="title_activity_multi2">Multi2Activity</string>
+    <string name="title_activity_multi3">Multi3Activity</string>
+    <string name="title_activity_multi4">Multi4Activity</string>
 </resources>
