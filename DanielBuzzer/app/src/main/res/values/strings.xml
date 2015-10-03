@@ -9,4 +9,11 @@
     <string name="title_activity_multi2">Multi2Activity</string>
     <string name="title_activity_multi3">Multi3Activity</string>
     <string name="title_activity_multi4">Multi4Activity</string>
+    <string name="title_activity_reaction_stats">ReactionStats</string>
+    <string name="title_activity_buzzer_stats">BuzzerStats</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
 </resources>
