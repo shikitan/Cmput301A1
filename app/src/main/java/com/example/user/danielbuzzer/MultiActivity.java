@@ -72,4 +72,10 @@ public class MultiActivity extends AppCompatActivity implements View.OnClickList
         }
 
     }
+
+    public void showResults() {
+
+    }
+
+
 }

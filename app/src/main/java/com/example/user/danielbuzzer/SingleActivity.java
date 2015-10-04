@@ -22,9 +22,7 @@ public class SingleActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single);
-
-
-
+        
 
         AlertDialog.Builder myAlert = new AlertDialog.Builder(this);
         myAlert.setMessage("After you click Ok \nPress the button when it says Go!!!");
@@ -68,7 +66,7 @@ public class SingleActivity extends AppCompatActivity{
 
             @Override
             public void onFinish() {
-                TextView msg = (TextView) findViewById(R.id.goText);
+                final TextView msg = (TextView) findViewById(R.id.goText);
                 msg.setText("GO!!!");
                 final long begt = System.currentTimeMillis();
 
@@ -77,12 +75,14 @@ public class SingleActivity extends AppCompatActivity{
                     public void onClick(View v) {
                         long endt = System.currentTimeMillis();
                         long diff = endt - begt;
-
+                        int diff2 = (int) diff;
+                        ReactionTime time = new ReactionTime(diff2);
                         AlertDialog.Builder newAlert = new AlertDialog.Builder(SingleActivity.this);
                         newAlert.setMessage("You Reacted in "+diff+" milliseconds! Press OK to play again");
                         newAlert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int num) {
                                 dialog.cancel();
+                                msg.setText("Get Ready");
                                 finish();
                                 startActivity(new Intent("danielbuzzer.Single"));
                             }
