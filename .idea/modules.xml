@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Dshin-reflex.iml" filepath="$PROJECT_DIR$/Dshin-reflex.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dshin-Reflex.iml" filepath="$PROJECT_DIR$/Dshin-Reflex.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
