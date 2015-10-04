@@ -2,10 +2,10 @@ package com.example.user.danielbuzzer;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,6 +18,8 @@ public class SingleActivity extends AppCompatActivity{
     private CountDownTimer rTimer;
     private Button singleReaction;
 
+    private static final String FILENAME = "reactions.sav";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +31,7 @@ public class SingleActivity extends AppCompatActivity{
         myAlert.setCancelable(false);
         myAlert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
+
                 dialog.cancel();
                 rTimer.start();
             }
@@ -47,7 +50,7 @@ public class SingleActivity extends AppCompatActivity{
         final TextView msg = (TextView) findViewById(R.id.goText);
 
         singleReaction = (Button)findViewById(R.id.singleReaction);
-
+        msg.setText("Get Ready");
         rTimer = new CountDownTimer(randNl, 1) {
             @Override
             public void onTick(long millisUntilFinished) {
@@ -77,6 +80,15 @@ public class SingleActivity extends AppCompatActivity{
                         long diff = endt - begt;
                         int diff2 = (int) diff;
                         ReactionTime time = new ReactionTime(diff2);
+
+                        ReactionManage reactions;
+                        reactions = new ReactionManage(FILENAME);
+
+                        reactions.loadList(getApplicationContext());
+                        reactions.add(time);
+                        reactions.saveList(getApplicationContext());
+
+
                         AlertDialog.Builder newAlert = new AlertDialog.Builder(SingleActivity.this);
                         newAlert.setMessage("You Reacted in "+diff+" milliseconds! Press OK to play again");
                         newAlert.setPositiveButton("OK", new DialogInterface.OnClickListener() {

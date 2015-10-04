@@ -1,13 +1,16 @@
 package com.example.user.danielbuzzer;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -34,7 +37,7 @@ public class ReactionStatsTab extends AppCompatActivity {
                 setResult(RESULT_OK);
                 reactions.clear();
                 adapter.notifyDataSetChanged();
-                saveInFile();
+
             }
         });
     }
@@ -52,10 +55,10 @@ public class ReactionStatsTab extends AppCompatActivity {
             BufferedReader in = new BufferedReader(new InputStreamReader(fis));
             Gson gson = new Gson();
             // Taken from https://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs/com/google/gson/Gson.html
-            Type listType = new TypeToken<ArrayList<NormalTweet>>() {}.getType();
-            tweets = gson.fromJson(in,listType);
+            Type listType = new TypeToken<ArrayList<ReactionTime>>() {}.getType();
+            reactions = gson.fromJson(in,listType);
         } catch (FileNotFoundException e) {
-            tweets = new ArrayList<Tweet>();
+            reactions = new ArrayList<ReactionTime>();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
