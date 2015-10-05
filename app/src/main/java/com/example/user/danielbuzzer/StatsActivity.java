@@ -6,18 +6,34 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TabHost;
 import android.widget.TextView;
 
 public class StatsActivity extends TabActivity {
 
-
+    Button clearMulti;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stats);
         updateMult();
+
+        clearMulti = (Button)findViewById(R.id.clearMulti);
+        clearMulti.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences prefs = getSharedPreferences("Share", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = prefs.edit();
+
+                editor.clear();
+                editor.commit();
+
+                updateMult();
+            }
+        });
 
         TabHost th = (TabHost)findViewById(android.R.id.tabhost);
         th.setup();
