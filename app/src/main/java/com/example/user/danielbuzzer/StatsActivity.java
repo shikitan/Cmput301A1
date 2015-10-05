@@ -1,12 +1,13 @@
 package com.example.user.danielbuzzer;
 
 import android.app.TabActivity;
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TabHost;
+import android.widget.TextView;
 
 public class StatsActivity extends TabActivity {
 
@@ -16,6 +17,7 @@ public class StatsActivity extends TabActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stats);
+        updateMult();
 
         TabHost th = (TabHost)findViewById(android.R.id.tabhost);
         th.setup();
@@ -30,6 +32,29 @@ public class StatsActivity extends TabActivity {
         spec.setIndicator("Buzzer Stats");
         th.addTab(spec);
 
+    }
+
+    private void updateMult(){
+        TextView msg = (TextView) findViewById(R.id.statMulti);
+        SharedPreferences prefs = getSharedPreferences("Share", Context.MODE_PRIVATE);
+
+        int count2P1 = prefs.getInt("2P1", 0);
+        int count2P2 = prefs.getInt("2P2", 0);
+
+        int count3P1 = prefs.getInt("3P1", 0);
+        int count3P2 = prefs.getInt("3P2", 0);
+        int count3P3 = prefs.getInt("3P3", 0);
+
+
+        int count4P1 = prefs.getInt("4P1", 0);
+        int count4P2 = prefs.getInt("4P2", 0);
+        int count4P3 = prefs.getInt("4P3", 0);
+        int count4P4 = prefs.getInt("4P4", 0);
+
+
+        msg.setText("2 Players: " + count2P1 + ", " + count2P2 + "\n3 Players: " + count3P1 + ", "
+                + count3P2 + ", " + count3P3 + "\n4 Players: " + count4P1 + ", " + count4P2 + ", "
+                + count4P3 + ", " + count4P4);
     }
 
     @Override

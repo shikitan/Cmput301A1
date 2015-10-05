@@ -18,6 +18,8 @@ public class SingleActivity extends AppCompatActivity{
     private CountDownTimer rTimer;
     private Button singleReaction;
 
+    private static ReactionManage reactions = new ReactionManage();
+
     private static final String FILENAME = "reactions.sav";
 
     @Override
@@ -46,6 +48,8 @@ public class SingleActivity extends AppCompatActivity{
         super.onStart();
         double randN = 10+(int)(Math.random()*2000);
         long randNl = Math.round(randN);
+
+
 
         final TextView msg = (TextView) findViewById(R.id.goText);
 
@@ -78,15 +82,9 @@ public class SingleActivity extends AppCompatActivity{
                     public void onClick(View v) {
                         long endt = System.currentTimeMillis();
                         long diff = endt - begt;
-                        int diff2 = (int) diff;
-                        ReactionTime time = new ReactionTime(diff2);
+                        final int diff2 = (int) diff;
 
-                        ReactionManage reactions;
-                        reactions = new ReactionManage(FILENAME);
 
-                        reactions.loadList(getApplicationContext());
-                        reactions.add(time);
-                        reactions.saveList(getApplicationContext());
 
 
                         AlertDialog.Builder newAlert = new AlertDialog.Builder(SingleActivity.this);
@@ -95,11 +93,14 @@ public class SingleActivity extends AppCompatActivity{
                             public void onClick(DialogInterface dialog, int num) {
                                 dialog.cancel();
                                 msg.setText("Get Ready");
+                                reactions.loadList(getApplicationContext());
+                                reactions.add(new ReactionTime(diff2));
+                                reactions.saveList(getApplicationContext());
                                 finish();
                                 startActivity(new Intent("danielbuzzer.Single"));
                             }
                         });
-
+                        newAlert.create();
                         newAlert.show();
 
                     }

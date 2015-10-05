@@ -17,9 +17,11 @@
 
 package com.example.user.danielbuzzer;
 
+import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -34,6 +36,37 @@ public class BuzzerActivity extends AppCompatActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        SharedPreferences prefs = getSharedPreferences("Multi", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+
+        int count2P1 = prefs.getInt("2P1", 0); //0 is default value.
+        int count2P2 = prefs.getInt("2P2", 0);
+
+        int count3P1 = prefs.getInt("3P1", 0);
+        int count3P2 = prefs.getInt("3P2", 0);
+        int count3P3 = prefs.getInt("3P3", 0);
+
+
+        int count4P1 = prefs.getInt("4P1", 0);
+        int count4P2 = prefs.getInt("4P2", 0);
+        int count4P3 = prefs.getInt("4P3", 0);
+        int count4P4 = prefs.getInt("4P4", 0);
+
+        editor.putInt("2P1", count2P1);
+        editor.putInt("2P2", count2P2);
+
+        editor.putInt("3P1", count3P1);
+        editor.putInt("3P2", count3P2);
+        editor.putInt("3P3", count3P3);
+
+        editor.putInt("4P1", count4P1);
+        editor.putInt("4P2", count4P2);
+        editor.putInt("4P3", count4P3);
+        editor.putInt("4P4", count4P4);
+
+        editor.commit();
+
         singleButton = (Button)findViewById(R.id.singleButton);
         singleButton.setOnClickListener(this);
 

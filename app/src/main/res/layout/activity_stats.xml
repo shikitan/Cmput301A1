@@ -4,10 +4,9 @@
     android:baselineAligned="false">
 
     <TabHost
-        android:layout_width="0dp"
+        android:layout_width="401dp"
         android:layout_height="wrap_content"
-        android:id="@android:id/tabhost"
-        android:layout_weight="1">
+        android:id="@android:id/tabhost">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -16,7 +15,7 @@
 
             <TabWidget
                 android:id="@android:id/tabs"
-                android:layout_width="match_parent"
+                android:layout_width="375dp"
                 android:layout_height="wrap_content">
 
             </TabWidget>
@@ -40,9 +39,27 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
+                    <TextView
+                        android:layout_width="378dp"
+                        android:layout_height="406dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:id="@+id/statMulti"
+                        android:layout_gravity="center_vertical" />
+
+                    <Button
+                        android:layout_width="380dp"
+                        android:layout_height="wrap_content"
+                        android:text="Clear"
+                        android:id="@+id/clear"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="bottom" />
                 </LinearLayout>
 
             </FrameLayout>
+
         </LinearLayout>
     </TabHost>
+
 </LinearLayout>
