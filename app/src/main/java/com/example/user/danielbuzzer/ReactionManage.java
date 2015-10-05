@@ -1,4 +1,4 @@
-package com.example.user.danielbuzzer;
+/*package com.example.user.danielbuzzer;
 
 import android.content.Context;
 
@@ -19,14 +19,18 @@ import java.util.List;
 /**
  * Created by User on 2015-10-04.
  */
-public class ReactionManage{
+/*public class ReactionManage{
     private List<ReactionTime> reactions;
     private static final String FILENAME = "reactions.sav";
+    Context myactivity;
 
+    public ReactionManage(Context activity) {
+        this.myactivity = activity;
+    }
 
-    public void loadList(Context mcontext){
+    public void loadList(){
         try {
-            FileInputStream fis = mcontext.openFileInput(FILENAME);
+            FileInputStream fis = myactivity.openFileInput(FILENAME);
             BufferedReader in = new BufferedReader(new InputStreamReader(fis));
             Gson gson = new Gson();
             // Taken from https://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs/com/google/gson/Gson.html
@@ -47,9 +51,9 @@ public class ReactionManage{
 
 
 
-    public void saveList(Context mcontext){
+    public void saveList(){
         try {
-            FileOutputStream fos = mcontext.openFileOutput(FILENAME, Context.MODE_PRIVATE);
+            FileOutputStream fos = myactivity.openFileOutput(FILENAME, Context.MODE_PRIVATE);
             OutputStreamWriter writer = new OutputStreamWriter(fos);
             Gson gson = new Gson();
             gson.toJson(reactions, writer);
@@ -63,3 +67,4 @@ public class ReactionManage{
     }
 
 }
+*/

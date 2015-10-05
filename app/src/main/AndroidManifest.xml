@@ -45,25 +45,6 @@
         </activity>
 
         <activity
-            android:name=".BuzzerStatsTab"
-            android:label="@string/title_activity_stats" >
-            <intent-filter>
-                <action android:name="danielbuzzer.Stats" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".ReactionStatsTab"
-            android:label="@string/title_activity_stats" >
-            <intent-filter>
-                <action android:name="danielbuzzer.Stats" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <activity
             android:name=".Multi2Activity"
             android:label="@string/title_activity_multi2" >
             <intent-filter>

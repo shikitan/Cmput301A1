@@ -31,6 +31,12 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
+                    <TextView
+                        android:layout_width="375dp"
+                        android:layout_height="448dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Reaction Stats are not all implemented. Change tabs to see \nthe Buzzer stats"
+                        android:id="@+id/textReaction" />
                 </LinearLayout>
 
                 <LinearLayout

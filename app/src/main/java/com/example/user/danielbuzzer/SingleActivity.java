@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -18,7 +16,6 @@ public class SingleActivity extends AppCompatActivity{
     private CountDownTimer rTimer;
     private Button singleReaction;
 
-    private static ReactionManage reactions = new ReactionManage();
 
     private static final String FILENAME = "reactions.sav";
 
@@ -73,7 +70,7 @@ public class SingleActivity extends AppCompatActivity{
 
             @Override
             public void onFinish() {
-                final TextView msg = (TextView) findViewById(R.id.goText);
+                TextView msg = (TextView) findViewById(R.id.goText);
                 msg.setText("GO!!!");
                 final long begt = System.currentTimeMillis();
 
@@ -82,20 +79,21 @@ public class SingleActivity extends AppCompatActivity{
                     public void onClick(View v) {
                         long endt = System.currentTimeMillis();
                         long diff = endt - begt;
-                        final int diff2 = (int) diff;
+                       /* int diff2 = (int) diff;
+                        ReactionManage reactions = new ReactionManage(SingleActivity.this);
 
-
-
-
+                        reactions.loadList();
+                        reactions.add(new ReactionTime(diff2));
+                        reactions.saveList();*/
+                        
                         AlertDialog.Builder newAlert = new AlertDialog.Builder(SingleActivity.this);
                         newAlert.setMessage("You Reacted in "+diff+" milliseconds! Press OK to play again");
                         newAlert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int num) {
                                 dialog.cancel();
+                                TextView msg = (TextView) findViewById(R.id.goText);
                                 msg.setText("Get Ready");
-                                reactions.loadList(getApplicationContext());
-                                reactions.add(new ReactionTime(diff2));
-                                reactions.saveList(getApplicationContext());
+
                                 finish();
                                 startActivity(new Intent("danielbuzzer.Single"));
                             }
@@ -109,27 +107,5 @@ public class SingleActivity extends AppCompatActivity{
         };
         rTimer.start();
 
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_single, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }
