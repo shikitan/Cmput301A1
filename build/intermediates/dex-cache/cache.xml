@@ -2,18 +2,18 @@
 <items version="2" >
 
     <item
+        jar="C:\Users\User\Documents\GitHub\Dshin-Reflex\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="C:\Users\User\Documents\GitHub\Dshin-Reflex\app\build\intermediates\pre-dexed\debug\classes-7609961380573cdd4c2401b26b686c3cb84a1958.jar" />
+    </item>
+    <item
         jar="C:\Users\User\Documents\GitHub\Dshin-Reflex\gson-2.4\gson-2.4.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
         <dex dex="C:\Users\User\Documents\GitHub\Dshin-Reflex\app\build\intermediates\pre-dexed\debug\gson-2.4-217e9e244c86c46d29f235be8b627cdc694ab6ee.jar" />
-    </item>
-    <item
-        jar="C:\Users\User\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="C:\Users\User\Documents\GitHub\Dshin-Reflex\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-d549de19b12dc583c9c92b246b485ac9c23198e7.jar" />
     </item>
     <item
         jar="C:\Users\User\Documents\GitHub\Dshin-Reflex\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
@@ -23,11 +23,11 @@
         <dex dex="C:\Users\User\Documents\GitHub\Dshin-Reflex\app\build\intermediates\pre-dexed\debug\classes-ba47c51f3b71fe121cc93b37c6f9f7ffdff01d71.jar" />
     </item>
     <item
-        jar="C:\Users\User\Documents\GitHub\Dshin-Reflex\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jar="C:\Users\User\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="C:\Users\User\Documents\GitHub\Dshin-Reflex\app\build\intermediates\pre-dexed\debug\classes-7609961380573cdd4c2401b26b686c3cb84a1958.jar" />
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="C:\Users\User\Documents\GitHub\Dshin-Reflex\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-d549de19b12dc583c9c92b246b485ac9c23198e7.jar" />
     </item>
     <item
         jar="C:\Users\User\Documents\GitHub\Dshin-Reflex\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"

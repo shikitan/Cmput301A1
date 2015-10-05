@@ -1,5 +1,5 @@
 /*
-    DanielBuzzer: SUMMARY
+    Dshin-Reflex: SUMMARY
     Copyright 2015 Daniel Shin dshin@ualberta.ca
 
     Licensed under the Apache License, Version 2.0 (the "License");
