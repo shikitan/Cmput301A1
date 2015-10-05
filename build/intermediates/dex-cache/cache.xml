@@ -2,6 +2,13 @@
 <items version="2" >
 
     <item
+        jar="C:\Users\User\Documents\GitHub\Dshin-Reflex\gson-2.4\gson-2.4.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
+        <dex dex="C:\Users\User\Documents\GitHub\Dshin-Reflex\app\build\intermediates\pre-dexed\debug\gson-2.4-217e9e244c86c46d29f235be8b627cdc694ab6ee.jar" />
+    </item>
+    <item
         jar="C:\Users\User\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
         jumboMode="false"
         revision="23.0.1"
@@ -28,13 +35,6 @@
         revision="23.0.1"
         sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
         <dex dex="C:\Users\User\Documents\GitHub\Dshin-Reflex\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-bb8a7dac687b3b56da48bac1f8391835b328b24f.jar" />
-    </item>
-    <item
-        jar="C:\Users\User\Documents\GitHub\Dshin-Reflex\gson-2.4\gson-2.4.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
-        <dex dex="C:\Users\User\Documents\GitHub\Dshin-Reflex\app\build\intermediates\pre-dexed\debug\gson-2.4-217e9e244c86c46d29f235be8b627cdc694ab6ee.jar" />
     </item>
 
 </items>

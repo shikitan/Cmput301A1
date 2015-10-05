@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+//This activity has buttons that sends the user to the different modes of the Buzzer mode
+//Each buzzer mode is identical in saving data into the Saved preferences variables
 public class MultiActivity extends AppCompatActivity implements View.OnClickListener{
 
     Button button2p, button3p, button4p;

@@ -19,6 +19,11 @@ import java.util.List;
 /**
  * Created by User on 2015-10-04.
  */
+
+//This class is edited out as it created a nullpointer error at the .add method.
+//It was supposed to an array class that held instances of Reaction Time objects
+
+//This class is in the singleactivity class
 /*public class ReactionManage{
     private List<ReactionTime> reactions;
     private static final String FILENAME = "reactions.sav";
@@ -28,6 +33,7 @@ import java.util.List;
         this.myactivity = activity;
     }
 
+This would load a presaved array list so that we can keep data persistant
     public void loadList(){
         try {
             FileInputStream fis = myactivity.openFileInput(FILENAME);
@@ -44,13 +50,13 @@ import java.util.List;
     }
 
 
-
+this would add on a new time to the array
     public void add(ReactionTime time){
         reactions.add(time);
     }
 
 
-
+Then we would save it into a file
     public void saveList(){
         try {
             FileOutputStream fos = myactivity.openFileOutput(FILENAME, Context.MODE_PRIVATE);

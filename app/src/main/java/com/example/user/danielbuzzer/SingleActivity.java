@@ -10,7 +10,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+/* This is for the reaction time mode. This Activity would have a reactionmanage array that would
+hold instances of the reactiontime objects
+Alertdialogs are used to show the popupmessage before you start the game and also after you get
+a reaction time.
 
+also a CountDownTimer is called to make a randomized delay that would stop you from recording a time
+if you pressed the button too early
+ */
 public class SingleActivity extends AppCompatActivity{
 
     private CountDownTimer rTimer;
@@ -23,14 +30,15 @@ public class SingleActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single);
-        
-
+        TextView msg = (TextView) findViewById(R.id.goText);
+        msg.setText("Get Ready");
         AlertDialog.Builder myAlert = new AlertDialog.Builder(this);
         myAlert.setMessage("After you click Ok \nPress the button when it says Go!!!");
         myAlert.setCancelable(false);
         myAlert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
-
+                TextView msg = (TextView) findViewById(R.id.goText);
+                msg.setText("Get Ready");
                 dialog.cancel();
                 rTimer.start();
             }
@@ -38,6 +46,7 @@ public class SingleActivity extends AppCompatActivity{
         });
         myAlert.create();
         myAlert.show();
+
     }
 
     @Override
@@ -45,10 +54,8 @@ public class SingleActivity extends AppCompatActivity{
         super.onStart();
         double randN = 10+(int)(Math.random()*2000);
         long randNl = Math.round(randN);
+        TextView msg = (TextView) findViewById(R.id.goText);
 
-
-
-        final TextView msg = (TextView) findViewById(R.id.goText);
 
         singleReaction = (Button)findViewById(R.id.singleReaction);
         msg.setText("Get Ready");
@@ -85,7 +92,7 @@ public class SingleActivity extends AppCompatActivity{
                         reactions.loadList();
                         reactions.add(new ReactionTime(diff2));
                         reactions.saveList();*/
-                        
+
                         AlertDialog.Builder newAlert = new AlertDialog.Builder(SingleActivity.this);
                         newAlert.setMessage("You Reacted in "+diff+" milliseconds! Press OK to play again");
                         newAlert.setPositiveButton("OK", new DialogInterface.OnClickListener() {

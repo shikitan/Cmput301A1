@@ -25,16 +25,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-
+//This is the main activity. Shows the home screen and connects to all the other activities
 public class BuzzerActivity extends AppCompatActivity implements View.OnClickListener {
-
-    Button singleButton, multiButton, statButton;
+//initializing buttons that send the user to other activities
+    Button singleButton, multiButton, statButton, emailButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+//shared preferences for the counts of the buzzer mode
         SharedPreferences prefs = getSharedPreferences("Multi", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
 
@@ -73,17 +73,15 @@ public class BuzzerActivity extends AppCompatActivity implements View.OnClickLis
 
         statButton = (Button)findViewById(R.id.statButton);
         statButton.setOnClickListener(this);
-    }
 
-    private void singleClick() {
-        startActivity(new Intent("danielbuzzer.Single"));
+        emailButton = (Button)findViewById(R.id.emailButton);
+        emailButton.setOnClickListener(this);
     }
-    private void multiClick() {
-        startActivity(new Intent("danielbuzzer.Multi"));
-    }
-    private void statClick() {
-        startActivity(new Intent("danielbuzzer.Stats"));
-    }
+//functions to go to other classes
+    private void singleClick() {startActivity(new Intent("danielbuzzer.Single"));}
+    private void multiClick() {startActivity(new Intent("danielbuzzer.Multi"));}
+    private void statClick() {startActivity(new Intent("danielbuzzer.Stats"));}
+    private void emailClick() { startActivity(new Intent("danielbuzzer.email"));}
 
     @Override
     public void onClick(View v) {
@@ -96,6 +94,9 @@ public class BuzzerActivity extends AppCompatActivity implements View.OnClickLis
                 break;
             case R.id.statButton:
                 statClick();
+                break;
+            case R.id.emailButton:
+                emailClick();
                 break;
         }
 

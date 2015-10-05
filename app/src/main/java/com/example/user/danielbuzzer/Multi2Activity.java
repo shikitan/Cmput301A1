@@ -10,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+//The multi activities are all similiar in taht they update shared preference variables when
+// a player buzzes and an alertdialog is also made.
 public class Multi2Activity extends AppCompatActivity {
 
     Button firstButton, secondButton;

@@ -43,7 +43,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".Multi2Activity"
             android:label="@string/title_activity_multi2" >
@@ -67,6 +66,15 @@
             android:label="@string/title_activity_multi4" >
             <intent-filter>
                 <action android:name="danielbuzzer.Multi4" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".EmailActivity"
+            android:label="@string/title_activity_email" >
+            <intent-filter>
+                <action android:name="danielbuzzer.email" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
